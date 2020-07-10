@@ -16,10 +16,13 @@ class String
   end
 
   def count_sentences
-    array=[]
-    array = self.split(/[\.!?]/)
-      array.delete_if{|x| x == ""}
-      array.count
+   #This works 
+   # array=[]
+    #array = self.split(/[\.!?]/)
+     # array.delete_if{|x| x == ""}
+      #array.count
+    #simpler. also changes regex 
+    self.split(/\.|\?|\!/).delete_if {|x| x == "" }.count
 
   end
   
